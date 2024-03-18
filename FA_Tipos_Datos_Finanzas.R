@@ -47,5 +47,28 @@ dy_graficos <- list(
 htmltools::browsable(htmltools::tagList(dy_graficos))
 
 
+################### Datos Tipo Transversales o Cross Sectional
+
+AMZN_2014 <- subset(PyV[,1], index(PyV) >= "2014-01-01"& index(PyV)<="2014-12-31")
+AMZN_2014[c(1:5, nrow(AMZN_2014))]
+
+AMZN_2020 <- subset(PyV[,1], index(PyV) >= "2020-01-01"& index(PyV)<="2020-12-31")
+AMZN_2020[c(1:5, nrow(AMZN_2020))]
+
+# visualizamos copn histogramas
+par(mfrow=c(2,1)) # divides el marco del grafico en 2 filas y 1 columna
+
+hist(AMZN_2014, freq = FALSE, col = "yellow", border = "blue", main = "Densidades de los Precios de Amzn en 2014", xlab = "Precios Cierre")
+lines(density(AMZN_2014), ldw=2, col="red")
+
+hist(AMZN_2020, freq = FALSE, col = "blue", border = "blue", main = "Densidades de los Precios de Amzn en 2020", xlab = "Precios Cierre")
+lines(density(AMZN_2020), ldw=2, col="red")
+
+
+
+
+
+
+
 
 
