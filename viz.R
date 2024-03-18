@@ -6,4 +6,5 @@ penguins %>%
   ggplot(aes(x= bill_depth_mm)) +
   geom_histogram()
 
-# hi there
+# hi there the path in OS is:
+# C:\R\UniversidadAndes
