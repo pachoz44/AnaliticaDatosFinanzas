@@ -36,4 +36,16 @@ Precios <- dygraph(PyV[,c(1,3,5,7)], main = "Precios de Amazon, Netflix, IMB y S
 Precios
 
 
+#####################  Panel Data
+library(dygraphs)
+library(htmltools)
+
+dy_graficos <- list(
+  dygraphs::dygraph(PyV[, c(1,3,5,7)], main = "Precios de Amazon, Netflix, IMB y SP&500"),
+  dygraphs::dygraph(PyV[, c(2,4,6,8)], main = "Volumenes de Amazon, Netflix, IMB y SP&500"))
+
+htmltools::browsable(htmltools::tagList(dy_graficos))
+
+
+
 
