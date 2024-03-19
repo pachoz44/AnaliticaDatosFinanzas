@@ -23,6 +23,8 @@ precios_volumenes("IBM")
 precios_volumenes("SPY")
 
 
+###################### Series de Tiempo XTS
+
 PyV <- merge.xts(AMZN, NFLX, IBM, SPY)
 colnames(PyV) <- c("Amazon P.Cierre", "Amazon Vol", "Netflix P.Cierre", "Netflix Vol",
                    "IBM P.Cierre", "IBM Vol", "SP500 P.Cierre", "SP500 Vol")
